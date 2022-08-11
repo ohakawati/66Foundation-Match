@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+    <head>
+    <style>
+        div.coverage{
+            position:fixed;
+            left:450px;
+            top:180px;
+            font-size: 45px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(0, 0, 0);
+        }
+    </style>
+    </head>
+    <body>
+        <div class="coverage"><strong>Choose Your Coverage:</strong></div>
+
+        <form action="/clickedCoverage" method="POST">
+            <button type="submit" class="button button2" name="coverage" value="Light"> 
+                <a style="text-decoration:none"> Light-Cover</a>
+        </button>
+        </form>
+
+        <form action="/clickedCoverage" method="POST">
+            <button type="submit" class="button button3" name="coverage" value="Medium"> 
+                <a style="text-decoration:none"> Medium-Cover</a>
+        </button>
+        </form>
+
+        <form action="/clickedCoverage" method="POST">
+            <button type="submit" class="button button4" name="coverage" value="Full"> 
+                <a style="text-decoration:none"> Full-Cover</a>
+        </button>
+        </form>
+
+    </body>
+</html>
+{% endblock %}

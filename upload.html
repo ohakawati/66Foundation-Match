@@ -1,0 +1,73 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+    <head>
+    <style>
+        div.upload{
+            position:fixed;
+            left:380px;
+            top:180px;
+            font-size: 45px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(0, 0, 0);
+        }
+        div.foreheadp{
+            position:fixed;
+            left:150px;
+            top:300px;
+            font-size: 30px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(0, 0, 0);
+        }
+        .forehead{
+            position: fixed;
+            left: 250px;
+            top: 350px;
+        }
+        div.rightsidep{
+            position: fixed;
+            left:800px;
+            top:300px;
+            font-size: 30px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(0, 0, 0);
+        }
+        .rightside{
+            position: fixed;
+            left: 900px;
+            top: 350px;
+        }
+        div.leftsidep{
+            position: fixed;
+            left:500px;
+            top:450px;
+            font-size: 30px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(0, 0, 0);
+        }
+        .leftside{
+            position: fixed;
+            left: 600px;
+            top: 500px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="upload"><strong>Upload Some Pics Of Your Face:</strong></div>
+        <div class="foreheadp">Upload a clear pic of: Forehead</div>
+        <div class="rightsidep">Upload a clear pic of: Right Cheek</div>
+        <div class="leftsidep">Upload a clear pic of: Left Cheek</div>
+
+
+        <form action="/uploadedImg" method="POST" enctype="multipart/form-data">
+            <input type="file" class="forehead" id="img1" name="img1" accept=".jpg">
+            <input type="file" class="rightside" id="img2" name="img2" accept=".jpg">
+            <input type="file" class="leftside" id="img3" name="img3" accept=".jpg">
+            <button type="submit" class="button button1"> 
+                <a style="text-decoration:none"> Submit</a>
+            </button></a>
+        </form>
+
+    </body>
+</html>
+{% endblock %}

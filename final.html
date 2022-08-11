@@ -1,0 +1,59 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+<head>
+
+<style>
+    div.final{
+            position:fixed;
+            left:300px;
+            top:220px;
+            font-size: 45px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(0, 0, 0);
+        }
+    div.found{
+        position:fixed;
+            left:400px;
+            top:350px;
+            font-size: 45px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(0, 0, 0);
+        }
+    div.brand{
+        position:fixed;
+            left:500px;
+            top:400px;
+            font-size: 45px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(0, 0, 0);
+        }
+    div.link{
+        position:fixed;
+            left:200px;
+            top:450px;
+            font-size: 45px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(0, 0, 0);
+        }
+    div.finalprice{
+        position:fixed;
+            left:550px;
+            top:580px;
+            font-size: 45px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(0, 0, 0);
+        }
+
+</style>
+</head>
+<body>
+    <div class="final"><strong> Here is Your Perfected Foundation Shade!</strong></div>
+    <div class="found"><strong>Your Foundation is {{foundation}}</strong></div>
+    <div class="brand"><strong>{{brand}}</strong></div>
+    <div class="link"><strong><a>{{link}}</a></strong></div>
+    <div class="finalprice"><strong>Price: ${{finalprice}}</strong></div>
+
+</body>
+</html>
+{% endblock %}

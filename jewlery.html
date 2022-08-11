@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+    <head>
+    <style>
+        div.skinType{
+            position:fixed;
+            left:300px;
+            top:180px;
+            font-size: 45px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(0, 0, 0);
+        }
+
+    </style>
+    </head>
+    <body>
+        <div class="skinType"><strong>Choose The Jewelry Color That Goes Best:</strong></div>
+
+        <form action="/clickedJewlery" method="POST">
+            <button type="submit" class="button button2" name="jewlery" value="Warm"> 
+                <a style="text-decoration:none"> Gold</a>
+        </button>
+        </form>
+
+        <form action="/clickedJewlery" method="POST">
+            <button type="submit" class="button button3" name="jewlery" value="Cool"> 
+                <a style="text-decoration:none"> Silver</a>
+        </button>
+        </form>
+
+        <form action="/clickedJewlery" method="POST">
+            <button type="submit" class="button button4" name="jewlery" value="Neutral"> 
+                <a style="text-decoration:none"> All</a>
+        </button>
+        </form>
+
+    </body>
+</html>
+{% endblock %}

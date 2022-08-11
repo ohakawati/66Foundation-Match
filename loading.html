@@ -1,0 +1,51 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv = "refresh" content = "5 ; url = finalPage"/>
+    <style>
+    .loader {
+          border: 16px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 16px solid #522727;
+          border-right: 16px solid #c0a7a7;
+          border-bottom: 16px solid #522727;
+          border-left: 16px solid #c0a7a7;
+          width: 120px;
+          height: 120px;
+          -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+          top: 400px;
+          left: 650px;
+          position: fixed;
+        }
+        
+    @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+        
+    @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        div.upload{
+            position:fixed;
+            left:150px;
+            top:220px;
+            font-size: 45px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(0, 0, 0);
+        }
+
+    </style>
+    </head>
+    <body>
+        <div class="loader"></div>
+        <div class="upload"><strong>Hang tight {{name}}, Your Perfect Shade is Being Calculated </strong></div>
+
+
+    </body>
+</html>
+{% endblock %}

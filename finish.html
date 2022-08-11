@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+    <head>
+    <style>
+        div.finish{
+            position:fixed;
+            left:500px;
+            top:180px;
+            font-size: 45px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(0, 0, 0);
+        }
+    </style>
+    </head>
+    <body>
+        <div class="finish"><strong>Choose Your Finish:</strong></div>
+
+        <form action="/clickedFinish" method="POST">
+            <button type="submit" class="button button6" name="finish" value="Dewy"> 
+                <a style="text-decoration:none"> Dewy</a>
+        </button>
+        </form>
+
+        <form action="/clickedFinish" method="POST">
+            <button type="submit" class="button button7" name="finish" value="Matte"> 
+                <a style="text-decoration:none"> Matte</a>
+        </button>
+        </form>
+
+    </body>
+</html>
+{% endblock %}

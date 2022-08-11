@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% block content %}
+<html>
+    <head>
+    <style>
+        div.h1{
+            position:fixed;
+            left:450px;
+            top:180px;
+            font-size: 45px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:rgb(0, 0, 0);
+        }
+    
+    </style>
+    </head>
+    <body>
+        <div class="h1"><strong>Choose Your Skin Type:</strong></div>
+
+        <form action="/clickedSkin" method="POST">
+            <button type="submit" class="button button2" name="skin" value="oily"> 
+                <a style="text-decoration:none"> Oily</a>
+        </button>
+        </form>
+
+        <form action="/clickedSkin" method="POST">
+            <button type="submit" class="button button3" name="skin" value="dry"> 
+                <a style="text-decoration:none"> Dry</a>
+        </button>
+        </form>
+
+        <form action="/clickedSkin" method="POST">
+            <button type="submit" class="button button4" name="skin" value="All"> 
+                <a style="text-decoration:none"> All</a>
+        </button>
+        </form>
+    </body>
+</html>
+{% endblock %}
