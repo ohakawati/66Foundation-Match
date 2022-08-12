@@ -4,6 +4,7 @@ import PersonClass
 from csv import writer
 import average
 import bq
+import os
 from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = 'Proj/Upload_folder/'
@@ -98,4 +99,4 @@ def finalPage():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
