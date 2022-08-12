@@ -1,7 +1,7 @@
 from google.cloud import bigquery as bq
 from google.oauth2 import service_account
 
-credentials = service_account.Credentials.from_service_account_file('credentials.json')
+credentials = service_account.Credentials.from_service_account_file('credentials.json', scopes=["https://www.googleapis.com/auth/cloud-platform"],)
 
 def query_matte(rvalue, gvalue, bvalue, undertone, coverage, budget):
 
